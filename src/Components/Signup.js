@@ -1,0 +1,32 @@
+import React from "react";
+import { useForm } from "react-hook-form";
+import "./App.css";
+import { Link } from 'react-router-dom';
+
+ 
+function Signup() {
+    const { register, handleSubmit, formState: { errors } } = useForm();
+ 
+    const onSubmit = (data) => console.log(data);
+ 
+    return (
+        <>
+            <p className="title">Signup Form</p>
+ 
+            <form className="App" onSubmit={handleSubmit(onSubmit)}>
+                <input type="text" {...register("name")} />
+                <input type="email" {...register("email", { required: true })} />
+                {errors.email && <span style={{ color: "red" }}>
+                    *Email* is mandatory </span>}
+                <input type="password" {...register("password")} />
+            <Link to="/login">
+              <input type={"submit"} style={{ backgroundColor: "#a1eafb" }} />
+             </Link>
+            </form>
+
+        </>
+
+        
+    );
+}
+export default Signup;

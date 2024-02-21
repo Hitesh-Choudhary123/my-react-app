@@ -1,0 +1,36 @@
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .title {
+    text-align: center;
+    width: 30vw;
+    background-color:teal;
+    padding: 10px 10px;
+    border-radius: 20px 20px 20px 20px;
+    font-size: 2rem;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .App {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 30vw;
+    padding: 2vw 1vw;
+    background-color:tan;
+    border-radius: 10px 10px 10px 10px;
+  }
+  
+  input {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 1vw 1vw;
+    outline: none;
+    margin: 5px;
+  }
